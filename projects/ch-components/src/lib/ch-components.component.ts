@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'lib-ch-components',
+  selector: 'ch-component',
   template: `
     <p>
       ch-components works!

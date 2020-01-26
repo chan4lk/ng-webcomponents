@@ -7,7 +7,7 @@
       "projectType": "library",
       "root": "projects/ch-components",
       "sourceRoot": "projects/ch-components/src",
-      "prefix": "lib",
+      "prefix": "ch",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
@@ -155,5 +155,5 @@
         }
       }
     }},
-  "defaultProject": "ch-components"
+  "defaultProject": "ch-app"
 }
