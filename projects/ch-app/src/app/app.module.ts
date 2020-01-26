@@ -11,6 +11,7 @@ import { reducers, metaReducers } from './reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
 import { AppEffects } from './app.effects';
+import { ChComponentsModule  } from '@chan4lk/ch-components';
 
 @NgModule({
   declarations: [
@@ -19,10 +20,11 @@ import { AppEffects } from './app.effects';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ChComponentsModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     StoreRouterConnectingModule.forRoot(),
     StoreModule.forRoot(reducers, {
-      metaReducers, 
+      metaReducers,
       runtimeChecks: {
         strictStateImmutability: true,
         strictActionImmutability: true,

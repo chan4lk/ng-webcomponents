@@ -20,7 +20,7 @@
       "dom"
     ],
     "paths": {
-      "ch-components": [
+      "@chan4lk/ch-components": [
         "dist/ch-components"
       ]
     }

@@ -6,12 +6,11 @@
     ]
   },
   "exclude": [
-    "../src/test.ts",
-    "../src/**/*.spec.ts",
+    "../projects/ch-app/src/test.ts",
+    "../projects/ch-components/src/test.ts",
     "../projects/**/*.spec.ts"
   ],
   "include": [
-    "../src/**/*",
     "../projects/**/*"
   ],
   "files": [
