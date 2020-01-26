@@ -12,7 +12,6 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
 import { AppEffects } from './app.effects';
 import { ChComponentsModule  } from '@chan4lk/ch-components';
-import { DashboardModule } from './dashboard/dashboard.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +21,6 @@ import { DashboardModule } from './dashboard/dashboard.module';
     BrowserModule,
     AppRoutingModule,
     ChComponentsModule,
-    DashboardModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     StoreRouterConnectingModule.forRoot(),
     StoreModule.forRoot(reducers, {
