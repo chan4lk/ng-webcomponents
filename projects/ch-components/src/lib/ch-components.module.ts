@@ -1,7 +1,7 @@
 import { NgModule, Injector } from '@angular/core';
 import { ChComponentsComponent } from './ch-components.component';
-import { createCustomElement } from '@angular/elements';
 import { CommonModule } from '@angular/common';
+import { createCustomElement } from '@angular/elements';
 
 @NgModule({
   declarations: [ChComponentsComponent],
@@ -10,11 +10,11 @@ import { CommonModule } from '@angular/common';
   entryComponents: [ChComponentsComponent]
 })
 export class ChComponentsModule {
-  constructor(private injector: Injector) {}
-  ngDoBootstrap() {
+  constructor(private injector: Injector) {
     const ngElement = createCustomElement(ChComponentsComponent, {
       injector: this.injector
     });
-    customElements.define('ch-component', ngElement);
+    customElements.define('ch-component-custom', ngElement);
+    console.log('bootrapping', ngElement);
   }
 }

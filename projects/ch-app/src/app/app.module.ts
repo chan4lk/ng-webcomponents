@@ -35,6 +35,8 @@ import { ChComponentsModule  } from '@chan4lk/ch-components';
   ],
   providers: [],
   bootstrap: [AppComponent],
+  entryComponents: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA ]
 })
-export class AppModule { }
+export class AppModule {
+ }
