@@ -146,24 +146,11 @@
           "options": {
             "tsConfig": [
               "projects/ch-app/tsconfig.app.json",
-              "projects/ch-app/tsconfig.spec.json",
-              "projects/ch-app/e2e/tsconfig.json"
+              "projects/ch-app/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
             ]
-          }
-        },
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "projects/ch-app/e2e/protractor.conf.js",
-            "devServerTarget": "ch-app:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "ch-app:serve:production"
-            }
           }
         }
       }
