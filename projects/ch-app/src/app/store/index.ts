@@ -17,7 +17,7 @@ import { Params, RouterStateSnapshot } from '@angular/router';
 
 
 export interface State {
-  router: RouterReducerState;
+  router: RouterReducerState<RouterStateUrl>;
 }
 
 export const reducers: ActionReducerMap<State> = {
