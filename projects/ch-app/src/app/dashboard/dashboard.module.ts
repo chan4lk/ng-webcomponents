@@ -3,6 +3,10 @@ import { CommonModule } from '@angular/common';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { MessageCardModule } from '@chan4lk/ch-components';
 import { HomeComponent } from './home/home.component';
+import { StoreModule } from '@ngrx/store';
+import { reducer } from '../store/movie-reducer';
+import { EffectsModule } from '@ngrx/effects';
+import { AppEffects } from '../store/effects/app.effects';
 
 
 @NgModule({
@@ -10,7 +14,9 @@ import { HomeComponent } from './home/home.component';
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    MessageCardModule
+    MessageCardModule,
+    StoreModule.forFeature('dashboard', reducer),
+    EffectsModule.forFeature([AppEffects])
   ]
 })
 export class DashboardModule { }

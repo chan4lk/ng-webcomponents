@@ -7,11 +7,12 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreModule } from '@ngrx/store';
-import { reducers, metaReducers } from './reducers';
+import { reducers, metaReducers, CustomSerializer } from './store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
-import { AppEffects } from './app.effects';
 import { ChComponentsModule  } from '@chan4lk/ch-components';
+import { HttpClientModule } from '@angular/common/http';
+import { AppEffects } from './store/effects/app.effects';
 
 @NgModule({
   declarations: [
@@ -21,8 +22,11 @@ import { ChComponentsModule  } from '@chan4lk/ch-components';
     BrowserModule,
     AppRoutingModule,
     ChComponentsModule,
+    HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-    StoreRouterConnectingModule.forRoot(),
+    StoreRouterConnectingModule.forRoot({
+      serializer: CustomSerializer
+    }),
     StoreModule.forRoot(reducers, {
       metaReducers,
       runtimeChecks: {
