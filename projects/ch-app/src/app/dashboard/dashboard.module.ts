@@ -4,9 +4,9 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { MessageCardModule } from '@chan4lk/ch-components';
 import { HomeComponent } from './home/home.component';
 import { StoreModule } from '@ngrx/store';
-import { reducer } from '../store/movie-reducer';
+import { reducer, featureKey } from './+state/dashboard.reducer';
 import { EffectsModule } from '@ngrx/effects';
-import { AppEffects } from '../store/effects/app.effects';
+import { DashboardEffects } from './+state/dashboard.effects';
 
 
 @NgModule({
@@ -15,8 +15,8 @@ import { AppEffects } from '../store/effects/app.effects';
     CommonModule,
     DashboardRoutingModule,
     MessageCardModule,
-    StoreModule.forFeature('dashboard', reducer),
-    EffectsModule.forFeature([AppEffects])
+    StoreModule.forFeature(featureKey, reducer),
+    EffectsModule.forFeature([DashboardEffects])
   ]
 })
 export class DashboardModule { }

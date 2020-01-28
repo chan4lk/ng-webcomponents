@@ -9,18 +9,6 @@
       "sourceRoot": "projects/ch-components/src",
       "prefix": "ch",
       "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
-            "tsConfig": "projects/ch-components/tsconfig.lib.json",
-            "project": "projects/ch-components/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "projects/ch-components/tsconfig.lib.prod.json"
-            }
-          }
-        },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {

@@ -2,11 +2,11 @@ import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { ROUTER_REQUEST } from '@ngrx/router-store';
 import { HTTPService } from '../../core/services/http.service';
-import { map, mergeMap, exhaustMap, switchMap } from 'rxjs/operators';
-import { dataLoaded } from '../movie-reducer';
+import { map, switchMap } from 'rxjs/operators';
+import { dataLoaded } from './dashboard.reducer';
 
 @Injectable()
-export class AppEffects {
+export class DashboardEffects {
   constructor(private actions$: Actions, private http: HTTPService) {}
 
   loadData$ = createEffect(

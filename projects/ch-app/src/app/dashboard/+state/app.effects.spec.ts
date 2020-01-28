@@ -2,21 +2,21 @@ import { TestBed } from '@angular/core/testing';
 import { provideMockActions } from '@ngrx/effects/testing';
 import { Observable } from 'rxjs';
 
-import { AppEffects } from './app.effects';
+import { DashboardEffects } from './dashboard.effects';
 
 describe('AppEffects', () => {
   let actions$: Observable<any>;
-  let effects: AppEffects;
+  let effects: DashboardEffects;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [
-        AppEffects,
+        DashboardEffects,
         provideMockActions(() => actions$)
       ]
     });
 
-    effects = TestBed.get<AppEffects>(AppEffects);
+    effects = TestBed.get<DashboardEffects>(DashboardEffects);
   });
 
   it('should be created', () => {

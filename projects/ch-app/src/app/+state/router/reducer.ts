@@ -1,13 +1,5 @@
 import {
-  ActionReducer,
-  ActionReducerMap,
-  createFeatureSelector,
-  createSelector,
-  createAction,
-  MetaReducer,
-  props
-} from '@ngrx/store';
-import { environment } from '../../environments/environment';
+  ActionReducerMap } from '@ngrx/store';
 import {
   routerReducer,
   RouterReducerState,
@@ -49,7 +41,3 @@ export class CustomSerializer implements RouterStateSerializer<RouterStateUrl> {
     return { url, params, queryParams };
   }
 }
-
-export const metaReducers: MetaReducer<State>[] = !environment.production
-  ? []
-  : [];
