@@ -4,9 +4,13 @@ import { Item } from '../../models/Item';
 export const featureKey = 'dashboard';
 
 export const dataLoaded = createAction(
-  '@data/loaded',
+  '[dashboard] data loaded',
   props<{ payload: Item[] }>()
 );
+
+export const pageLoaded = createAction(
+  '[dashboard] page laoded'
+)
 
 export interface MovieState {
   data: Item[];
@@ -20,10 +24,7 @@ export const selectMovies = createFeatureSelector<MovieState>(featureKey);
 
 const movieReducer = createReducer(
   initialState,
-  on(dataLoaded, (state, { payload }) => {
-      debugger;
-    return { data: payload };
-  })
+  on(dataLoaded, (state, { payload }) => ({ data: payload }))
 );
 
 export function reducer(state: MovieState | undefined, action: Action) {

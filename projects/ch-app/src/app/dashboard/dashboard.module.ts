@@ -7,6 +7,7 @@ import { StoreModule } from '@ngrx/store';
 import { reducer, featureKey } from './+state/dashboard.reducer';
 import { EffectsModule } from '@ngrx/effects';
 import { DashboardEffects } from './+state/dashboard.effects';
+import { ChComponentsModule } from 'projects/ch-components/src';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { DashboardEffects } from './+state/dashboard.effects';
   imports: [
     CommonModule,
     DashboardRoutingModule,
+    ChComponentsModule,
     MessageCardModule,
     StoreModule.forFeature(featureKey, reducer),
     EffectsModule.forFeature([DashboardEffects])

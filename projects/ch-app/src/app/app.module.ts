@@ -18,7 +18,6 @@ import { MessageCardModule } from 'projects/ch-components/src';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ChComponentsModule,
     HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production
