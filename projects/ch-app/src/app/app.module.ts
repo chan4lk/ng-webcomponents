@@ -11,6 +11,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
 import { ChComponentsModule } from '@chan4lk/ch-components';
 import { HttpClientModule } from '@angular/common/http';
+import { MessageCardModule } from 'projects/ch-components/src';
 
 @NgModule({
   declarations: [AppComponent],
