@@ -8,10 +8,11 @@ import { reducer, featureKey } from './+state/dashboard.reducer';
 import { EffectsModule } from '@ngrx/effects';
 import { DashboardEffects } from './+state/dashboard.effects';
 import { ChComponentsModule } from 'projects/ch-components/src';
+import { MessagesComponent } from './messages/messages.component';
 
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [HomeComponent, MessagesComponent],
   imports: [
     CommonModule,
     DashboardRoutingModule,

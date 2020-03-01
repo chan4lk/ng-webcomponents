@@ -3,12 +3,11 @@ import { initialJourneyState, JourneyState } from './journey.state';
 import { addScreen } from './journery.actions';
 
 const journeys = {
-  NEW: ['dashboard'],
-  CASE1: ['dashboard', 'home'],
-  CASE2: ['dashboard', 'messages']
+  CASE1: ['home'],
+  CASE2: ['home', 'messages']
 };
 
-const initailScreen = 'dashboard';
+const initailScreen = 'home';
 
 const reducer = createReducer(
   initialJourneyState,

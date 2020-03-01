@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, EMPTY } from 'rxjs';
 import { Action } from '@ngrx/store';
 import { Actions, ofType, createEffect } from '@ngrx/effects';
 import {
@@ -15,9 +15,14 @@ export class JourneyEffects {
   onNavigated$: Observable<Action> = createEffect(() =>
     this.actions$.pipe(
       ofType(ROUTER_NAVIGATED),
-      map((action: { payload }) =>
-        addScreen({ payload: action.payload.routerState.data.id })
-      )
+      map((action: { payload }) => {
+        if (
+          action.payload.routerState.data &&
+          action.payload.routerState.data.id
+        ) {
+          return addScreen({ payload: action.payload.routerState.data.id });
+        }
+      })
     )
   );
 

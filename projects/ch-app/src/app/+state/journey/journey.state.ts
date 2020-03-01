@@ -5,7 +5,7 @@ export interface JourneyState {
 }
 
 export const initialJourneyState: JourneyState = {
-  current: 'NEW',
-  screen: 'dashboard',
-  journey: ['dashboard']
+  current: 'CASE1',
+  screen: 'home',
+  journey: ['home']
 };
