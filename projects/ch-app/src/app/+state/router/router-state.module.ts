@@ -15,6 +15,7 @@ import { StoreModule } from '@ngrx/store';
       }),
       EffectsModule.forFeature([])
 ],
-  exports: []
+  exports: [],
+  providers: []
 })
-export class AppRoutingModule { }
+export class RouterStateModule { }

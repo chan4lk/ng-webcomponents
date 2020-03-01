@@ -5,12 +5,23 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
+    redirectTo: 'dashboard',
+    pathMatch: 'full',
+    data: {
+      id: 'root'
+    }
+  },
+  {
+    path: 'dashboard',
+    data: {
+      id: 'dashboard'
+    },
     loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {initialNavigation: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

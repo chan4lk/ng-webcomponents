@@ -7,7 +7,10 @@ import { MessageCardModule } from '@chan4lk/ch-components';
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
+    data: {
+      id: 'home'
+    }
   }
 ];
 
