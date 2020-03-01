@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { MessageCardModule } from '@chan4lk/ch-components';
 import { MessagesComponent } from './messages/messages.component';
+import { AboutComponent } from './about/about.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,13 @@ const routes: Routes = [
     component: MessagesComponent,
     data: {
       id: 'messages'
+    }
+  },
+  {
+    path: 'about',
+    component: AboutComponent,
+    data: {
+      id: 'about'
     }
   }
 ];

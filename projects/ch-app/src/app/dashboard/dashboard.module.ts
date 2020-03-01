@@ -9,10 +9,11 @@ import { EffectsModule } from '@ngrx/effects';
 import { DashboardEffects } from './+state/dashboard.effects';
 import { ChComponentsModule } from 'projects/ch-components/src';
 import { MessagesComponent } from './messages/messages.component';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, MessagesComponent],
+  declarations: [HomeComponent, MessagesComponent, AboutComponent],
   imports: [
     CommonModule,
     DashboardRoutingModule,

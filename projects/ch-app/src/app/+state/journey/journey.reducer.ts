@@ -4,7 +4,8 @@ import { addScreen } from './journery.actions';
 
 const journeys = {
   CASE1: ['home'],
-  CASE2: ['home', 'messages']
+  CASE2: ['home', 'messages'],
+  CASE3: ['home', 'about']
 };
 
 const initailScreen = 'home';
