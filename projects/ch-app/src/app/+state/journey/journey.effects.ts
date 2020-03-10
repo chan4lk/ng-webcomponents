@@ -1,10 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Observable, EMPTY } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Action } from '@ngrx/store';
 import { Actions, ofType, createEffect } from '@ngrx/effects';
 import {
-  RouterNavigatedPayload,
-  SerializedRouterStateSnapshot,
   ROUTER_NAVIGATED
 } from '@ngrx/router-store';
 import { map } from 'rxjs/operators';

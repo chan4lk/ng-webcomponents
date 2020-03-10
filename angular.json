@@ -49,6 +49,7 @@
             "index": "projects/ch-app/src/index.html",
             "main": "projects/ch-app/src/main.ts",
             "polyfills": "projects/ch-app/src/polyfills.ts",
+            "extractCss": true,
             "tsConfig": "projects/ch-app/tsconfig.app.json",
             "aot": true,
             "assets": [
@@ -57,7 +58,17 @@
               "projects/ch-app/src/manifest.webmanifest"
             ],
             "styles": [
-              "projects/ch-app/src/styles.scss"
+              "projects/ch-app/src/styles.scss",
+              {
+                "input": "projects/ch-app/src/assets/theme/light.scss",
+                "lazy": true,
+                "bundleName": "theme-default"
+              },
+              {
+                "input": "projects/ch-app/src/assets/theme/dark.scss",
+                "lazy": true,
+                "bundleName": "theme-default-dark"
+              }
             ],
             "scripts": []
           },
