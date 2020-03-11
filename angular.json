@@ -45,7 +45,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ch-app",
+            "outputPath": "dist/ch-app/browser",
             "index": "projects/ch-app/src/index.html",
             "main": "projects/ch-app/src/main.ts",
             "polyfills": "projects/ch-app/src/polyfills.ts",
@@ -150,6 +150,41 @@
             "exclude": [
               "**/node_modules/**"
             ]
+          }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/ch-app/server",
+            "main": "projects/ch-app/src/main.server.ts",
+            "tsConfig": "projects/ch-app/tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media",
+              "fileReplacements": [
+                {
+                  "replace": "projects/ch-app/src/environments/environment.ts",
+                  "with": "projects/ch-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "sourceMap": false,
+              "optimization": true
+            }
+          }
+        },
+        "app-shell": {
+          "builder": "@angular-devkit/build-angular:app-shell",
+          "options": {
+            "browserTarget": "ch-app:build",
+            "serverTarget": "ch-app:server",
+            "route": "shell"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ch-app:build:production",
+              "serverTarget": "ch-app:server:production"
+            }
           }
         }
       }

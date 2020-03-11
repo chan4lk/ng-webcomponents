@@ -8,17 +8,19 @@ import { environment } from '../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
 import { JourneyService } from './core/services/history.service';
 import { StoreStateModule } from './+state/store-state.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production
     }),
-    StoreStateModule
+    StoreStateModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent],

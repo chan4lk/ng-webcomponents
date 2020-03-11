@@ -2,9 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Action } from '@ngrx/store';
 import { Actions, ofType, createEffect } from '@ngrx/effects';
-import {
-  ROUTER_NAVIGATED
-} from '@ngrx/router-store';
+import { ROUTER_NAVIGATED } from '@ngrx/router-store';
 import { map } from 'rxjs/operators';
 import { addScreen } from './journery.actions';
 
@@ -19,6 +17,8 @@ export class JourneyEffects {
           action.payload.routerState.data.id
         ) {
           return addScreen({ payload: action.payload.routerState.data.id });
+        } else {
+          return { type: 'ignore' };
         }
       })
     )
