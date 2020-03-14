@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1, 
-  "newProjectRoot": "projects",
+  "newProjectRoot": "",
   "projects": {
     "ch-components": {
       "projectType": "library",
@@ -38,34 +38,34 @@
           "style": "scss"
         }
       },
-      "root": "projects/ch-app",
-      "sourceRoot": "projects/ch-app/src",
+      "root": "apps\\ch-app",
+      "sourceRoot": "apps\\ch-app\\src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ch-app/browser",
-            "index": "projects/ch-app/src/index.html",
-            "main": "projects/ch-app/src/main.ts",
-            "polyfills": "projects/ch-app/src/polyfills.ts",
+            "outputPath": "dist\\apps\\ch-app",
+            "index": "apps/ch-app/src/index.html",
+            "main": "apps/ch-app/src/main.ts",
+            "polyfills": "apps/ch-app/src/polyfills.ts",
             "extractCss": true,
-            "tsConfig": "projects/ch-app/tsconfig.app.json",
+            "tsConfig": "apps\\ch-app\\tsconfig.app.json",
             "aot": true,
             "assets": [
-              "projects/ch-app/src/favicon.ico",
-              "projects/ch-app/src/assets",
-              "projects/ch-app/src/manifest.webmanifest"
+              "apps/ch-app/src/favicon.ico",
+              "apps/ch-app/src/assets",
+              "apps/ch-app/src/manifest.webmanifest"
             ],
             "styles": [
-              "projects/ch-app/src/styles.scss",
+              "apps/ch-app/src/styles.scss",
               {
-                "input": "projects/ch-app/src/assets/theme/light.scss",
+                "input": "apps/ch-app/src/assets/theme/light.scss",
                 "lazy": true,
                 "bundleName": "theme-default"
               },
               {
-                "input": "projects/ch-app/src/assets/theme/dark.scss",
+                "input": "apps/ch-app/src/assets/theme/dark.scss",
                 "lazy": true,
                 "bundleName": "theme-default-dark"
               }
@@ -76,8 +76,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "projects/ch-app/src/environments/environment.ts",
-                  "with": "projects/ch-app/src/environments/environment.prod.ts"
+                  "replace": "apps/ch-app/src/environments/environment.ts",
+                  "with": "apps/ch-app/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -101,7 +101,7 @@
                 }
               ],
               "serviceWorker": true,
-              "ngswConfigPath": "projects/ch-app/ngsw-config.json"
+              "ngswConfigPath": "apps/ch-app/ngsw-config.json"
             }
           }
         },
@@ -125,17 +125,17 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ch-app/src/test.ts",
-            "polyfills": "projects/ch-app/src/polyfills.ts",
-            "tsConfig": "projects/ch-app/tsconfig.spec.json",
-            "karmaConfig": "projects/ch-app/karma.conf.js",
+            "main": "apps/ch-app/src/test.ts",
+            "polyfills": "apps/ch-app/src/polyfills.ts",
+            "tsConfig": "apps\\ch-app\\tsconfig.spec.json",
+            "karmaConfig": "apps\\ch-app\\karma.conf.js",
             "assets": [
-              "projects/ch-app/src/favicon.ico",
-              "projects/ch-app/src/assets",
-              "projects/ch-app/src/manifest.webmanifest"
+              "apps/ch-app/src/favicon.ico",
+              "apps/ch-app/src/assets",
+              "apps/ch-app/src/manifest.webmanifest"
             ],
             "styles": [
-              "projects/ch-app/src/styles.scss"
+              "apps/ch-app/src/styles.scss"
             ],
             "scripts": []
           }
@@ -144,8 +144,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/ch-app/tsconfig.app.json",
-              "projects/ch-app/tsconfig.spec.json"
+              "apps\\ch-app\\tsconfig.app.json",
+              "apps\\ch-app\\tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -155,17 +155,17 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/ch-app/server",
-            "main": "projects/ch-app/server.ts",
-            "tsConfig": "projects/ch-app/tsconfig.server.json"
+            "outputPath": "dist\\apps\\ch-app\\server",
+            "main": "apps/ch-app/server.ts",
+            "tsConfig": "apps\\ch-app\\tsconfig.server.json"
           },
           "configurations": {
             "production": {
               "outputHashing": "media",
               "fileReplacements": [
                 {
-                  "replace": "projects/ch-app/src/environments/environment.ts",
-                  "with": "projects/ch-app/src/environments/environment.prod.ts"
+                  "replace": "apps/ch-app/src/environments/environment.ts",
+                  "with": "apps/ch-app/src/environments/environment.prod.ts"
                 }
               ],
               "sourceMap": false,

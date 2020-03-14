@@ -1,7 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": ".",
     "outDir": "./dist",
     "skipLibCheck": true,
     "sourceMap": true,
@@ -23,7 +23,8 @@
       "@chan4lk/ch-components": [
         "projects/ch-components/src/index.ts"
       ]
-    }
+    },
+    "rootDir": "."
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
