@@ -38,19 +38,19 @@
           "style": "scss"
         }
       },
-      "root": "apps\\ch-app",
-      "sourceRoot": "apps\\ch-app\\src",
+      "root": "apps/ch-app",
+      "sourceRoot": "apps/ch-app/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist\\apps\\ch-app",
+            "outputPath": "dist/apps/ch-app/browser",
             "index": "apps/ch-app/src/index.html",
             "main": "apps/ch-app/src/main.ts",
             "polyfills": "apps/ch-app/src/polyfills.ts",
             "extractCss": true,
-            "tsConfig": "apps\\ch-app\\tsconfig.app.json",
+            "tsConfig": "apps/ch-app/tsconfig.app.json",
             "aot": true,
             "assets": [
               "apps/ch-app/src/favicon.ico",
@@ -127,8 +127,8 @@
           "options": {
             "main": "apps/ch-app/src/test.ts",
             "polyfills": "apps/ch-app/src/polyfills.ts",
-            "tsConfig": "apps\\ch-app\\tsconfig.spec.json",
-            "karmaConfig": "apps\\ch-app\\karma.conf.js",
+            "tsConfig": "apps/ch-app/tsconfig.spec.json",
+            "karmaConfig": "apps/ch-app/karma.conf.js",
             "assets": [
               "apps/ch-app/src/favicon.ico",
               "apps/ch-app/src/assets",
@@ -144,8 +144,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "apps\\ch-app\\tsconfig.app.json",
-              "apps\\ch-app\\tsconfig.spec.json"
+              "apps/ch-app/tsconfig.app.json",
+              "apps/ch-app/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -155,9 +155,9 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist\\apps\\ch-app\\server",
+            "outputPath": "dist/apps/ch-app/server",
             "main": "apps/ch-app/server.ts",
-            "tsConfig": "apps\\ch-app\\tsconfig.server.json"
+            "tsConfig": "apps/ch-app/tsconfig.server.json"
           },
           "configurations": {
             "production": {
