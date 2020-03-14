@@ -20,7 +20,6 @@ import { RouterModule } from '@angular/router';
       enabled: environment.production
     }),
     StoreStateModule,
-    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent],
