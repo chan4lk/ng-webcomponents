@@ -5,24 +5,24 @@
   "projects": {
     "ch-components": {
       "projectType": "library",
-      "root": "projects/ch-components",
-      "sourceRoot": "projects/ch-components/src",
+      "root": "libs/ch-components",
+      "sourceRoot": "libs/ch-components/src",
       "prefix": "ch",
       "architect": {
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ch-components/src/test.ts",
-            "tsConfig": "projects/ch-components/tsconfig.spec.json",
-            "karmaConfig": "projects/ch-components/karma.conf.js"
+            "main": "libs/ch-components/src/test.ts",
+            "tsConfig": "libs/ch-components/tsconfig.spec.json",
+            "karmaConfig": "libs/ch-components/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/ch-components/tsconfig.lib.json",
-              "projects/ch-components/tsconfig.spec.json"
+              "libs/ch-components/tsconfig.lib.json",
+              "libs/ch-components/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"

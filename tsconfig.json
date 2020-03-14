@@ -21,7 +21,7 @@
     ],
     "paths": {
       "@chan4lk/ch-components": [
-        "projects/ch-components/src/index.ts"
+        "libs/ch-components/src/index.ts"
       ]
     },
     "rootDir": "."
