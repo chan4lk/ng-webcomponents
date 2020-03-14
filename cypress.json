@@ -1,1 +1,6 @@
-{}
+{
+  "fixturesFolder": "./apps/ch-app-e2e/fixtures",
+  "integrationFolder": "./apps/ch-app-e2e/integration",
+  "pluginsFile": "./apps/ch-app-e2e/plugins/index",
+  "supportFile": "./apps/ch-app-e2e/support/index.js"
+}

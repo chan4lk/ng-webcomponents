@@ -1,17 +1,19 @@
 {
-  "extends": "../projects/ch-components/tsconfig.lib.json",
+  "extends": "../libs/ch-components/tsconfig.lib.json",
   "compilerOptions": {
     "types": [
       "node"
     ]
   },
   "exclude": [
-    "../projects/ch-app/src/test.ts",
-    "../projects/ch-components/src/test.ts",
-    "../projects/**/*.spec.ts"
+    "../apps/ch-app/src/test.ts",
+    "../libs/ch-components/src/test.ts",
+    "../apps/**/*.spec.ts",
+    "../libs/**/*.spec.ts"
   ],
   "include": [
-    "../projects/**/*"
+    "../apps/**/*",
+    "../libs/**/*"
   ],
   "files": [
     "./typings.d.ts"
