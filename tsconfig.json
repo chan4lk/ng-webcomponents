@@ -20,6 +20,9 @@
       "dom"
     ],
     "paths": {
+      "@chan4lk/ch-app/*": [
+        "apps/ch-app/*"
+      ],
       "@chan4lk/ch-components": [
         "libs/ch-components/src/index.ts"
       ]

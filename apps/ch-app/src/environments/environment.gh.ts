@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  dataAPI: '/assets/api/data.json'
+  dataAPI: '/ng-webcomponents/assets/api/data.json'
 };

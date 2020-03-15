@@ -102,6 +102,36 @@
               ],
               "serviceWorker": true,
               "ngswConfigPath": "apps/ch-app/ngsw-config.json"
+            },
+            "github": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/ch-app/src/environments/environment.ts",
+                  "with": "apps/ch-app/src/environments/environment.gh.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ],
+              "serviceWorker": true,
+              "ngswConfigPath": "apps/ch-app/ngsw-config.json"
             }
           }
         },
